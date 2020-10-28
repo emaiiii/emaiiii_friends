@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+}
+
+
+.footer-container{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row; 
+	align-items: center;
+	width:100%;
+	height: 10vh;
+	bottom: 0;
+	background-color: green;
+}
+
+.content{
+	background-color: white;
+}

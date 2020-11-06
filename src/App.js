@@ -19,8 +19,12 @@ function App() {
 
               {/*--Home Page--*/}
               <Route path="/">
-                  <SignIn/>
-                  <Footer/>
+                  <div className="landing-page-center">
+                    <div>
+                      <SignIn/>
+                    </div>
+                    <Footer/>
+                  </div>
               </Route>
 
         </Switch>

@@ -5,21 +5,22 @@ import './Footer.css';
 function Footer() {
 	return(
 		<div className="footer-container">
+			<hr className="h-line-footer"/>
+			
 			<div className="content">	
-				<h1>Hello</h1>
+				<h4>Sign in</h4>
 			</div>
 
 			<div className="content">
-				<h1>My Name</h1>
+				<h4>Sign up</h4>
 			</div>
 
 			<div className="content">
-				<h1>Erik</h1>
+				<h4>Help</h4>
 			</div>
-
 
 			<div className="content">		     
-		        <h1>©Friends</h1> 
+		        <h3>Friends©2020</h3> 
 		    </div>
 		</div>
 	);

@@ -19,12 +19,18 @@ function App() {
 
               {/*--Home Page--*/}
               <Route path="/">
-                  <div className="landing-page-center">
+                  {/*--Top Region of The Landing Page--*/}
+                  <div className="flex-container">
+                    <div className="banner_background text-center">
+                      <h1 className="banner_fontHeader">Welcome to Friends</h1>
+                      <p className="banner_fontBody">Connect with friends and the world around you.</p>
+                    </div>
                     <div>
                       <SignIn/>
                     </div>
-                    <Footer/>
                   </div>
+
+                  <Footer/>
               </Route>
 
         </Switch>

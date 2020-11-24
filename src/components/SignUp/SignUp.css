@@ -2,26 +2,6 @@
   margin: 0;
 }
 
-.registration{
-  font-family: Walsheim, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.register-container{
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
-  position: relative;
-  overflow: hidden;
-  height: 590px;
-  width: 700px;
-  max-width: 100%;
-  min-height: 480px;
-}
-
 .register-form form{
   background: white;
   display: flex;
@@ -31,13 +11,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-label{
-  display: inline-block;
-  height: 10px;
-  width: 670px;
-  text-align: left;
 }
 
 .social-register{
@@ -66,18 +39,20 @@ label{
   width: 100%;
 }
 
+/*///////////////////////////////////////////////*/
+/*--Register Button Stuff--*/
 .register-button{
   font-family: Walsheim, sans-serif !important;
   border-radius: 20px;
   border: none;
-  background: #b3d9ff;
+  background: #2392FF;
   font-size: 15px;
   font-weight: bold;
-  color: white;
-  margin-top: 35px;
-  padding: 12px 45px;
+  margin-top: 15px;
+  padding: 12px 110px;
   letter-spacing: 1px;
-  text-transform: upercase;
+  text-transform: uppercase;
+  color: white;
   transition: transform 80ms ease-in;
 }
 
@@ -92,14 +67,17 @@ label{
 .register-button:hover{
   cursor: pointer;
 }
-
-.regsister-button.ghost{
-  background: transparent;
-  border-color: #fff;
+/*///////////////////////////////////////////////*/
+.field{
+  margin-bottom: 15px;
+  padding: 10px 10px;
 }
 
+.field:focus{
+  outline: none;
+}
 
-.h-line {
+.h-line{
   clear: both;
   display: block;
   width: 100%;

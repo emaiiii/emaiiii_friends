@@ -19,7 +19,7 @@ function Footer() {
 				<h4>Help</h4>
 			</div>
 
-			<div className="content">		     
+			<div className="content company-tag">		     
 		        <h3>Friends©2020</h3> 
 		    </div>
 		</div>

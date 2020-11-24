@@ -15,7 +15,7 @@ input {
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
-	margin-right: -50pc; 
+	margin-right: -85pc; 
 }
 
 .login-container{
@@ -48,7 +48,12 @@ input {
 	width: 100%;
 }
 
-.signup-button{
+.accountinfo:focus{
+	outline: none;
+}
+/*///////////////////////////////////////////////*/
+/*--Sign In Button Stuff--*/
+.signin-button{
 	font-family: Walsheim, sans-serif !important;
 	border-radius: 20px;
 	border: none;
@@ -56,7 +61,34 @@ input {
 	font-size: 15px;
 	font-weight: bold;
 	margin-top: 15px;
-	padding: 12px 45px;
+	padding: 12px 110px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: white;
+	transition: transform 80ms ease-in;
+}
+
+.signin-button:active{
+	transform: scale(0.95);
+}
+
+.signin-button:focus{
+	outline: none;
+}
+
+.signin-button:hover{
+	cursor: pointer;
+}
+/*///////////////////////////////////////////////*/
+/*--Sign Up Button Stuff--*/
+.signup-button{
+	font-family: Walsheim, sans-serif !important;
+	border-radius: 20px;
+	border: none;
+	background: #00cc00;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 12px 25px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: white;
@@ -75,11 +107,7 @@ input {
 	cursor: pointer;
 }
 
-.button.ghost{
-	background: transparent;
-	border-color: #fff;
-}
-
+/*///////////////////////////////////////////////*/
 .form-container{
 	position: absolute;
 	top: 0;
@@ -97,8 +125,7 @@ input {
 	display: block;
 	width: 100%;
 	background-color: #f2f2f2;
-	margin-top: 25px;
-	margin-bottom: 50px;
+	margin-bottom: 25px;
  	height: 1px;
 }
 
@@ -107,36 +134,8 @@ input {
 }
 
 .f-pass {
-	color: black;
+	color: default;
 	text-decoration: none;
 	font-size: 14px;
-	margin-bottom: 15px;
-}
-
-
-/*-overlay stuff*/
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 10;
-}
-
-/* just some content with arbitrary styles for explanation purposes */
-.modal {
-    width: 300px;
-    height: 200px;
-    line-height: 200px;
-    position: fixed;
-    top: 50%; 
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -150px;
-    background-color: #f1c40f;
-    border-radius: 5px;
-    text-align: center;
-    z-index: 11; /* 1px higher than the overlay layer */
+	margin-top: 15px;
 }

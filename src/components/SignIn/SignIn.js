@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {Link} from "react-router-dom";
 import SignUp from '../SignUp/SignUp';
 import './SignIn.css';
 
@@ -13,8 +14,8 @@ function SignIn() {
 							<input className="accountinfo" type="email" placeholder="Email" />
 							<input className="accountinfo" type="password" placeholder="Password" />
 
-							<button className="signin-button" id="signIn">Sign In</button>
-							<a href="#" className="f-pass">Forgot password?</a>
+							<Link to="/main" className="signin-button" id="signIn">Sign In</Link>
+							<a href="fpass" className="f-pass">Forgot password?</a>
 
 							<hr className="h-line"/>
 

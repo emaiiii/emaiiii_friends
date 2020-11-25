@@ -8,19 +8,19 @@ function Footer() {
 			<hr className="h-line-footer"/>
 			
 			<div className="content">	
-				<h4>Sign in</h4>
+				<h5>Sign in</h5>
 			</div>
 
 			<div className="content">
-				<h4>Sign up</h4>
+				<h5>Sign up</h5>
 			</div>
 
 			<div className="content">
-				<h4>Help</h4>
+				<h5>Help</h5>
 			</div>
 
 			<div className="content company-tag">		     
-		        <h3>Friends©2020</h3> 
+		        <h5>Friends©2020</h5> 
 		    </div>
 		</div>
 	);

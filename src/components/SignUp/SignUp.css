@@ -68,6 +68,18 @@
   cursor: pointer;
 }
 /*///////////////////////////////////////////////*/
+/*--Other Stuff--*/
+.font-header{
+  font-family: Walsheim, sans-serif !important;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.font-body{
+  font-family: Walsheim, sans-serif !important;
+  font-size: 20px;
+}
+
 .field{
   margin-bottom: 15px;
   padding: 10px 10px;

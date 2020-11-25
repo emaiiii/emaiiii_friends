@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+}
+
+.main-title{
+	font-family: Walsheim, sans-serif !important;
+}
+
+/*/////////////////////////////////////*/
+/*--Searching Stuff--*/
+.navigation_search{
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
+.searchbar_sizing{
+	max-width: 400px;
+	width: 100%;
+}
+
+.searchButton{
+	margin-left: 5px;
+}
+/*/////////////////////////////////////*/
+.link{
+	color: white;
+	text-decoration: none;
+}
+

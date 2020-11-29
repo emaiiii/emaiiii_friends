@@ -4,6 +4,7 @@
 
  .background{
  	position: fixed;
+ 	overflow: auto;
  	height: 100%;
  	width: 100%;
  	background-image: linear-gradient(to bottom, #ECE9E6, #FFFFFF);

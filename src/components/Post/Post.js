@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from "@material-ui/core/Avatar";
+import IconButton from "@material-ui/core/IconButton";
 
 import './Post.css';
 
@@ -13,14 +14,17 @@ function Post({username, caption, imageUrl}){
 					alt="emaiiii"
 					src="/static/images/avatar/1.jpg"
 				/>
-				<h3>{username}</h3>
+				<h6>{username}</h6>
 			</div>
 			
 			{/*image*/}
 			<img className="post-image" src={imageUrl}/>
 			
+			<div>
+			
+			</div>
 			{/*username + caption*/}
-			<h4 className="post-text"><strong>{username}: </strong>{caption}</h4>
+			<h5 className="post-text"><strong>{username}: </strong>{caption}</h5>
 		</div>
 	);
 }

@@ -11,5 +11,8 @@
  }
 
  .mainpage-posts{
- 	padding: 20px;
+ 	display: flex;
+ 	flex-direction: column;
+ 	flex-shrink: 0;
+ 	align-items: center;
  }

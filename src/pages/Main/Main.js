@@ -10,7 +10,8 @@ function Main() {
 			username: "emaiiii",
 			caption: "I love Apple and Google!!",
 			imageUrl: "https://images.idgesg.net/images/article/2020/04/google-apple-contact-tracing-100838707-large.jpg"
-		},		{
+		},		
+		{
 			username: "mkdoan",
 			caption: "I love Apple and Google too!!",
 			imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm-Y7sqzilHz418I6RKtg-BNhp7aTz-_qIZ0qJebEMz5bqaFQcXZ4t3OiglkY0Cjfe251YxtgIBUgEeiScCcYaDA6Q-YDPiS0&usqp=CAU&ec=45732301"

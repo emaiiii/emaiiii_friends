@@ -19,9 +19,9 @@ function SignIn() {
 
 							<hr className="h-line"/>
 
-							<button className="signup-button" onClick={() => setModalShow(true)}>
+							<Link className="signup-button" onClick={() => setModalShow(true)}>
 								Create an Account
-							</button>
+							</Link>
 
 							<SignUp show={modalShow} onHide={() => setModalShow(false)}/>
 						</form>

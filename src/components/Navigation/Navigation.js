@@ -17,8 +17,9 @@ function Navigation() {
 		    </div>
 
 		    {/*LINKS*/}
-		    <Nav className="mr-auto">													
-		      <Nav.Link href="/">Sign Out</Nav.Link>
+		    <Nav className="mr-auto">
+		    	<Nav.Link href="/myacc">My Account</Nav.Link>													
+		      	<Nav.Link href="/">Sign Out</Nav.Link>
 		    </Nav>
 		 </Navbar>
 	);

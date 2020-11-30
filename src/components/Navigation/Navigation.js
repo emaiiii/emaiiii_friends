@@ -6,7 +6,7 @@ import './Navigation.css';
 function Navigation() {
 	return(
 		<Navbar className="sticky" sticky="top" bg="light" variant="light">
-		    <Navbar.Brand href="/main" className="main-title">Friends</Navbar.Brand>
+		    <Navbar.Brand href="/main" className="main-title"><strong>Friends</strong></Navbar.Brand>
 
 		    {/*SEARCH BOX*/}
 		    <div className="navigation_search mr6">

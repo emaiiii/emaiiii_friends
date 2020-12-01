@@ -1,0 +1,17 @@
+.profile-avatar{
+	height: 160px !important;
+	width: 160px !important;
+}
+
+.profile-container{
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 1px solid grey; 
+	margin: 15px;
+}
+
+.profile-attr-container{
+	display: flex;
+	justify-content: space-between;
+	width: 120%;
+}

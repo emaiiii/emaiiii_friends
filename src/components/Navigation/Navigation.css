@@ -28,3 +28,16 @@
 	text-decoration: none;
 }
 
+.nav-profile{
+	display: flex;
+}
+
+.nav-profile-avatar{
+	height: 30px !important;
+	width: 30px !important; 
+}
+
+.nav-profile-user{
+	margin-top: 5px;
+	margin-left: 6px;
+}

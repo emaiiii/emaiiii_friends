@@ -1,5 +1,8 @@
 import React from 'react';
+import Avatar from "@material-ui/core/Avatar";
 import {Navbar, Nav, FormControl, Button} from 'react-bootstrap';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 
 import './Navigation.css';
 
@@ -18,8 +21,18 @@ function Navigation() {
 
 		    {/*LINKS*/}
 		    <Nav className="mr-auto">
-		    	<Nav.Link href="/myacc">My Account</Nav.Link>													
-		      	<Nav.Link href="/">Sign Out</Nav.Link>
+		    	<Nav.Link href="/myprofile" title="My Profile">
+			    	<div className="nav-profile">
+						<Avatar
+							className="nav-profile-avatar"
+							alt="emaiiii"
+							src="/static/images/avatar/1.jpg"
+						/>
+						<h6 className="nav-profile-user">emaiiii</h6>
+					</div>
+				</Nav.Link>
+		    	<Nav.Link href="/main" title="Home"><HomeOutlinedIcon/></Nav.Link>												
+		      	<Nav.Link href="/" title="Sign Out"><ExitToAppOutlinedIcon/></Nav.Link>
 		    </Nav>
 		 </Navbar>
 	);

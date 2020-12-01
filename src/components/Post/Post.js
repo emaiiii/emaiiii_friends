@@ -14,7 +14,7 @@ function Post({username, caption, imageUrl}){
 			<div className="post-header">
 				<Avatar
 					className="post-avatar"
-					alt="emaiiii"
+					alt={username}
 					src="/static/images/avatar/1.jpg"
 				/>
 				<h6>{username}</h6>

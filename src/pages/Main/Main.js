@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Navigation from '../../components/Navigation/Navigation';
+import MainEmbed from '../../components/MainEmbed/MainEmbed';
 import Post from '../../components/Post/Post';
 
 import './Main.css';
@@ -33,12 +34,17 @@ function Main() {
 			<Navigation/>
 			
 			<div className="mainpage-posts">
-				{/*--loop through the posts array and create a post component for each object--*/}
-				{
-					posts.map(post => (
-						<Post username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
-					))
-				}
+				<div className="mainpage-posts-left">
+					{/*--loop through the posts array and create a post component for each object--*/}
+					{
+						posts.map(post => (
+							<Post username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
+						))
+					}
+				</div>
+				<div className="mainpage-posts-right">
+					<MainEmbed/>
+				</div>
 			</div>
 
 		</div>

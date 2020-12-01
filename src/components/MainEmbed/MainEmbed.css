@@ -1,0 +1,38 @@
+.mainEmbed{
+	position: sticky;
+	top: 85px;
+	width: 400px;
+}
+
+.mainEmbed-profile{
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.mainEmbed-sugg{
+	display: flex;
+}
+
+.mainEmbed-sugg-title{
+	margin-bottom: 20px;
+}
+
+.mainEmbed-suggestedfollows{
+	margin-top: 10px;
+}
+
+.mainEmbed-Button{
+	position: absolute;
+	right: 0;
+}
+
+.mainEmbed-link{
+	position: absolute;
+	margin-right: 8px;
+	right: 0;
+}
+
+.mainEmbed-footer-content{
+	font-size: 14px;
+	color: #bfbfbf;
+}

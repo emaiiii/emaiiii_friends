@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from "@material-ui/core/Avatar";
+import {Button} from 'react-bootstrap';
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
@@ -17,7 +18,7 @@ function Post({username, caption, imageUrl}){
 					alt={username}
 					src="/static/images/avatar/1.jpg"
 				/>
-				<h6>{username}</h6>
+				<h6 className="avuse-name">{username}</h6>
 			</div>
 			
 			{/*image*/}
@@ -37,11 +38,17 @@ function Post({username, caption, imageUrl}){
 					<BookmarkBorderOutlinedIcon/>
 				</IconButton>
 			</div>
-			
-			<hr className="post-hline"/>
 
 			{/*username + caption*/}
 			<h5 className="post-text"><strong>{username}: </strong>{caption}</h5>
+
+			<hr className="post-hline"/>
+
+			{/*comment text field*/}
+			<div className="post-commentline">
+				<input className="post-textfield" type="Comment" placeholder="Add a comment..."/>
+				<Button className="post-postButton" variant="link">Post</Button>
+			</div>
 		</div>
 	);
 }

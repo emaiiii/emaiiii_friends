@@ -15,7 +15,7 @@ function MainEmbed(){
 					alt="emaiiii"
 					src="/static/images/avatar/1.jpg"
 				/>
-				<h6>emaiiii</h6>
+				<h6 className="avuse-name">emaiiii</h6>
 			</div>
 
 			{/*Suggested people to follow*/}
@@ -34,7 +34,7 @@ function MainEmbed(){
 						alt="mkdoan"
 						src="/static/images/avatar/1.jpg"
 					/>
-					<h6>mkdoan</h6>
+					<h6 className="avuse-name">mkdoan</h6>
 
 					<Button variant="link" className="mainEmbed-Button">Follow</Button>
 				</div>
@@ -45,7 +45,7 @@ function MainEmbed(){
 						alt="jluo"
 						src="/static/images/avatar/1.jpg"
 					/>
-					<h6>jluo</h6>
+					<h6 className="avuse-name">jluo</h6>
 
 					<Button variant="link" className="mainEmbed-Button">Follow</Button>
 				</div>
@@ -56,7 +56,7 @@ function MainEmbed(){
 						alt="thomasbomas"
 						src="/static/images/avatar/1.jpg"
 					/>
-					<h6>thomasbomas</h6>
+					<h6 className="avuse-name">thomasbomas</h6>
 
 					<Button variant="link" className="mainEmbed-Button">Follow</Button>
 				</div>
@@ -67,7 +67,7 @@ function MainEmbed(){
 						alt="rickydicky"
 						src="/static/images/avatar/1.jpg"
 					/>
-					<h6>rickydicky</h6>
+					<h6 className="avuse-name">rickydicky</h6>
 
 					<Button variant="link" className="mainEmbed-Button">Follow</Button>
 				</div>
@@ -78,7 +78,7 @@ function MainEmbed(){
 						alt="pewdiepie"
 						src="/static/images/avatar/1.jpg"
 					/>
-					<h6>pewdiepie</h6>
+					<h6 className="avuse-name">pewdiepie</h6>
 
 					<Button variant="link" className="mainEmbed-Button">Follow</Button>
 				</div>

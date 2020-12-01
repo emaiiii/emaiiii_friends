@@ -17,7 +17,8 @@
 .post-text{
 	font-weight: normal;
 	font-size: 16px;
-	padding: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
 }
 
 .post-header{
@@ -28,6 +29,8 @@
 
 .post-avatar{
 	margin-right: 10px;
+	height: 35px !important;
+	width: 35px !important;
 }
 
 .icon-button:focus{
@@ -35,14 +38,49 @@
 }
 
 .post-hline{
-	display: block;
+	position: relative;
 	width: 100%;
 	background-color: #f2f2f2;
-	margin-top: -1px;
-	margin-bottom: -3px;
- 	height: 1px;
+	margin-top: -5px;
 }
 
 .post-iconrow{
 	margin-left: 5px;
 }
+
+.avuse-name{
+	margin-top: 5px;
+}
+
+.post-textfield{
+	border: none;
+	border-radius: 0;
+	background-color: white !important;
+	padding: 5px;
+	padding-left: 18px !important;
+}
+
+.post-textfield:focus{
+	outline: none;
+}
+
+.post-commentline{
+	display: flex;
+	margin-bottom: 10px;
+	margin-top: -5px;
+}
+
+.post-postButton:hover{
+	text-decoration: none !important;
+}
+
+.post-postButton:focus{
+	text-decoration: none !important;
+	outline: none !important;
+}
+
+.post-postButton:active{
+	outline: none !important;
+	border: none !important;
+}
+

@@ -17,8 +17,7 @@
 .post-text{
 	font-weight: normal;
 	font-size: 16px;
-	padding-left: 20px;
-	padding-bottom: 10px;
+	margin-left: 20px;
 }
 
 .post-header{
@@ -70,6 +69,25 @@
 	margin-top: -5px;
 }
 
+
+.post-textfield{
+	flex: 1;
+	border: none;
+	border-radius: 0;
+	background-color: white !important;
+	padding: 10px;
+	padding-left: 18px !important;
+}
+
+.post-textfield:focus{
+	outline: none;
+}
+
+.post-postButton{
+	flex: 0;
+	color: #6082a3;
+}
+
 .post-postButton:hover{
 	text-decoration: none !important;
 }
@@ -84,3 +102,7 @@
 	border: none !important;
 }
 
+.post-comments{
+	margin-left: 10px;
+	padding: 10px;
+}

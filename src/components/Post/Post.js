@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Avatar from "@material-ui/core/Avatar";
 import {Button} from 'react-bootstrap';
 import IconButton from "@material-ui/core/IconButton";
@@ -9,6 +9,32 @@ import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutline
 import './Post.css';
 
 function Post({username, caption, imageUrl}){
+
+	const [comments, setComments] = useState([
+		{
+			username: "rando1",
+			text: "wow your post is so cool"
+		},		
+		{
+			username: "rando2",
+			text: "amazing post"
+		},		
+		{
+			username: "rando3",
+			text: "i want to be just like you"
+		},
+		{
+			username: "rando4",
+			text: "add me on league!"
+		},
+	]);
+	
+	const [comment, setComment] = useState('');
+
+	const postComment = () => (event) => {
+
+	}
+
 	return(
 		<div className="post">
 			{/*header -- avatar + username*/}
@@ -40,15 +66,39 @@ function Post({username, caption, imageUrl}){
 			</div>
 
 			{/*username + caption*/}
-			<h5 className="post-text"><strong>{username}: </strong>{caption}</h5>
+			<h5 className="post-text"><strong>{username} </strong>{caption}</h5>
 
-			<hr className="post-hline"/>
+
+			<div className="post-comments">
+				{/*--loop through the posts array and create a post component for each object--*/}
+				{
+					comments.map((comment) => (
+						<p>
+							<strong>{comment.username}</strong> {comment.text}
+						</p>
+					))
+				}
+			</div>
+
 
 			{/*comment text field*/}
-			<div className="post-commentline">
-				<input className="post-textfield" type="Comment" placeholder="Add a comment..."/>
-				<Button className="post-postButton" variant="link">Post</Button>
-			</div>
+			<hr className="post-hline"/>
+			<form className="post-commentline">
+				<input 
+					className="post-textfield" 
+					type="text" 
+					value={comment}
+					placeholder="Add a comment..."
+					onChange={(e) => setComment(e.target.value)}
+				/>
+				<Button 
+					className="post-postButton"
+					disabled={!comment}
+					type="submit" 
+					variant="link"
+					onClick={postComment}
+				>Post</Button>
+			</form>
 		</div>
 	);
 }

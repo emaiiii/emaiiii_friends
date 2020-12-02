@@ -49,6 +49,8 @@
 
 /*Comment TextField Stuff*/
 .postModal-commentline{
+	display: flex;
+	flex-wrap: wrap;
 	position: absolute;
 	left: 590px;
 	right: 0;
@@ -73,7 +75,6 @@
 }
 
 .postModal-textfield{
-	flex-shrink: 2;
 	border: none;
 	border-radius: 0;
 	background-color: white !important;
@@ -88,7 +89,6 @@
 
 /*Post Button Stuff*/
 .postModal-postButton{
-	flex: 1;
 	color: #6082a3;
 	position: absolute;
 	right: 0px;

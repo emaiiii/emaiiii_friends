@@ -45,13 +45,10 @@
 
 /*Comment TextField Stuff*/
 .postModal-commentline{
-	display: flex;
-	flex-wrap: wrap;
 	position: absolute;
-	left: 625px;
-	right: 0;
 	bottom: 0;
-	max-width: 40%;
+	width: inherit;
+	max-width: 100%;
 	border-top: 1px solid lightgrey;
 }
 

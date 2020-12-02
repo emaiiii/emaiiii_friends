@@ -72,7 +72,7 @@ function PostModal(props){
 
 
 							{/*comment text field*/}
-							<div className="postModal-commentline-container">
+							<div>
 								<form className="postModal-commentline">
 									<input 
 										className="post-textfield" 

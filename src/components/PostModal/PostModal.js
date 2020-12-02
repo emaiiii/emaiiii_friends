@@ -2,6 +2,10 @@ import React, {useState} from 'react';
 import Avatar from "@material-ui/core/Avatar";
 import {Button} from 'react-bootstrap';
 import {Modal} from 'react-bootstrap';
+import IconButton from "@material-ui/core/IconButton";
+import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
+import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
+import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutlined';
 
 import './PostModal.css';
 
@@ -70,19 +74,33 @@ function PostModal(props){
 								}
 							</div>
 
+							{/*icon button row*/}
+							<div className="postModal-iconrow">
+								<IconButton className="icon-button">
+									<FavoriteBorderOutlinedIcon/>
+								</IconButton>
+
+								<IconButton className="icon-button">
+									<ChatBubbleOutlineOutlinedIcon/>
+								</IconButton>
+
+								<IconButton className="icon-button">
+									<BookmarkBorderOutlinedIcon/>
+								</IconButton>
+							</div>
 
 							{/*comment text field*/}
-							<div>
-								<form className="postModal-commentline">
+							<div className="postModal-commentline">
+								<form className="postModal-form">
 									<input 
-										className="post-textfield" 
+										className="postModal-textfield" 
 										type="text" 
 										value={comment}
 										placeholder="Add a comment..."
 										onChange={(e) => setComment(e.target.value)}
 									/>
 									<Button 
-										className="post-postButton"
+										className="postModal-postButton"
 										disabled={!comment}
 										type="submit" 
 										variant="link"

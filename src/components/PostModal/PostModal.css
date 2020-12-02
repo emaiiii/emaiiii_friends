@@ -6,31 +6,27 @@
 	padding: 0px !important;
 }
 
-
-.postModal{
-	padding: 0px !important;
-	margin: 0px !important;
-}
-
 .postModal-container{
 	display: flex;
 }
 
 .postModal-image-container{
 	display: flex;
+	flex: 2; 
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
 }
 
 .postModal-right{
-	width: 40%;
+	width: 35%;
 }
 
 .postModal-image{
 	object-fit: cover;
-	height: 600px;
-	width: 600px;
+	height: 100%;
+	width: auto;
+	min-height: 600px;
 }
 
 .postModal-container-owner{
@@ -52,7 +48,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	position: absolute;
-	left: 590px;
+	left: 625px;
 	right: 0;
 	bottom: 0;
 	max-width: 40%;

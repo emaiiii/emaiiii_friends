@@ -1,9 +1,13 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
+import PostModal from '../PostModal/PostModal';
 
 import './Profile.css';
 
 function Profile() {
+	const [modalShow, setModalShow] = React.useState(false);
+	
 	return (
 		<div className="profile">
 			<div className="profile-container">
@@ -26,6 +30,13 @@ function Profile() {
 					</div>
 					<h4 className="profile-name">Erik Mai</h4>
 					<p>UCR 20' | CS </p>
+
+
+					<Link className="signup-button" onClick={() => setModalShow(true)}>
+						Create an Account
+					</Link>
+
+					<PostModal show={modalShow} onHide={() => setModalShow(false)}/>
 				</div>
 			</div>
 

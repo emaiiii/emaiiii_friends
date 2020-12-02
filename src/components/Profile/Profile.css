@@ -1,17 +1,46 @@
+.profile{
+	max-width: 1000px;
+	margin: 0px auto;
+}
+
 .profile-avatar{
 	height: 160px !important;
 	width: 160px !important;
+	margin-bottom: 25px;
 }
 
 .profile-container{
 	display: flex;
-	justify-content: space-around;
-	border-bottom: 1px solid grey; 
-	margin: 15px;
+	justify-content: center;
+	border-bottom: 1px solid lightgrey; 
+	margin: 20px;
 }
 
 .profile-attr-container{
 	display: flex;
 	justify-content: space-between;
-	width: 120%;
+}
+
+.profile-right{
+	width: 400px;
+	margin-left: 50px;
+}
+
+.profile-username{
+	padding-bottom: 10px;
+}
+
+.profile-name{
+	padding-top: 10px;
+}
+
+.profile-gallery{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.gallery-item{
+	margin: 10px;
+	width: 30%;
 }

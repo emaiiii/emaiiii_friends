@@ -4,7 +4,7 @@ import Profile from '../../components/Profile/Profile';
 
 function MyProfile() {
 	return(
-		<div>
+		<div className="background">
 			<Navigation/>
 			<Profile/>
 		</div>

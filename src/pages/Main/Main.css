@@ -16,7 +16,17 @@
  	padding: 20px;
  }
 
+.mainpage-posts-left{
+	margin-left: 50px;
+}
+
 .mainpage-posts-right{
 	margin-left: 20px;
 	margin-top: 20px;
+}
+
+.mainpage-postUploader{
+	flex-shrink: 2;
+	width: 500px;
+	margin-left: -200px;
 }

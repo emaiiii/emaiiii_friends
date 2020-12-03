@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Navigation from '../../components/Navigation/Navigation';
 import MainEmbed from '../../components/MainEmbed/MainEmbed';
 import Post from '../../components/Post/Post';
+import PostUploader from '../../components/PostUploader/PostUploader';
 
 import './Main.css';
 
@@ -34,6 +35,10 @@ function Main() {
 			<Navigation/>
 			
 			<div className="mainpage-posts">
+				<div className="mainpage-postUploader">
+					<PostUploader/>
+				</div>
+
 				<div className="mainpage-posts-left">
 					{/*--loop through the posts array and create a post component for each object--*/}
 					{
@@ -46,7 +51,6 @@ function Main() {
 					<MainEmbed/>
 				</div>
 			</div>
-
 		</div>
 	);
 }

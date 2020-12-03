@@ -36,6 +36,7 @@
 
 .profile-gallery{
 	display: flex;
+	position: relative;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
@@ -43,4 +44,9 @@
 .gallery-item{
 	margin: 10px;
 	width: 30%;
+}
+
+.gallery-item:hover{
+	cursor: pointer;
+	opacity: 0.7;
 }

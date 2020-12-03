@@ -14,7 +14,7 @@ function Landing() {
             <p className="banner_fontBody">Connect with friends and the world around you.</p>
           </div>
           
-          <div>
+          <div className="signin-component">
             <SignIn/>
           </div>
       </div>

@@ -15,7 +15,6 @@ input {
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
-	margin-right: -85pc; 
 }
 
 .login-container{

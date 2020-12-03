@@ -4,27 +4,32 @@ import SignUp from '../SignUp/SignUp';
 import './SignIn.css';
 
 function SignIn(props) {
+	// state management
 	const [modalShow, setModalShow] = useState(false);
 	const [signInEmail, setSignInEmail] = useState('');
 	const [signInPass, setSignInPass] = useState(''); 
 	const [redirect, setRedirect] = useState(false);
 
+	// listen for event of email input
 	function onEmailChange(event){
 		setSignInEmail(event.target.value);
 	}
 
+	// listen for event of password input
 	function onPassChange(event){
 		setSignInPass(event.target.value);
 	}
 
+	// send log in request for either a pass/fail
 	function onSubmitSignIn(){
-		//create state object for purpose of returning json object
+		// create state object for purpose of returning json object
 		const state = {
 			signInEmail: signInEmail,
 			signInPass: signInPass,
 		}
 		console.log(state);
 
+		// send sign in request to the server
 		fetch("http://localhost:3000/signin", {
 			method: "post",
 			headers: {"Content-Type": "application/json"},
@@ -35,13 +40,14 @@ function SignIn(props) {
 		})
 			.then(response => response.json())
 			.then(data => {
+				// check to see if successful to set the redirect state
 				if(data === "Success"){
-					console.log("Gay");
 					setRedirect(true);
 				}
 			})
 	}
 
+	// if true redirect to the main feed page
 	function renderRedirect(){
 		if(redirect){
 			return <Redirect to="/main"/>

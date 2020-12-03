@@ -4,8 +4,8 @@ import {Button} from 'react-bootstrap';
 import './PostUploader.css';
 
 function PostUploader(){
-	const [image, setImage] = useState(null);
-	const [progress, setProgress] = useState(0);
+	const [setImage] = useState(null);
+	const [progress] = useState(0);
 	const [caption, setCaption] = useState('');
 
 	const handleChange = (e) => {

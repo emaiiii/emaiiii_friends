@@ -7,7 +7,7 @@ import PostUploader from '../../components/PostUploader/PostUploader';
 import './Main.css';
 
 function Main() {
-	const [posts, setPosts] = useState([
+	const [posts] = useState([
 		{
 			username: "emaiiii",
 			caption: "I love Apple and Google!!",

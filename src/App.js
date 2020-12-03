@@ -9,6 +9,15 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  const componentDidMount = () => {
+    fetch("http://localhost:3000")
+      .then(response => response.json())
+      .then(console.log)
+  };
+
+  componentDidMount();
+  
   return (
     <Router>
       <div className="App">

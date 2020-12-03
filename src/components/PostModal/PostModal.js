@@ -11,7 +11,7 @@ import './PostModal.css';
 
 function PostModal(props){
 
-	const [comments, setComments] = useState([
+	const [comments] = useState([
 		{
 			username: "rando1",
 			text: "wow your post is so cool"
@@ -48,7 +48,7 @@ function PostModal(props){
                 	<div className="postModal-container">
 	                	{/*Post Image*/}
 	                	<div className="postModal-image-container">
-	                    	<img className="postModal-image" src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/14112506/Pembroke-Welsh-Corgi-standing-outdoors-in-the-fall.jpg"/>
+	                    	<img alt="image1" className="postModal-image" src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/14112506/Pembroke-Welsh-Corgi-standing-outdoors-in-the-fall.jpg"/>
 	                	</div>
 
 	                	{/*Post Info-Comment Section*/}

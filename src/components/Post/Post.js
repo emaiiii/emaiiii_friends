@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Avatar from "@material-ui/core/Avatar";
 import {Button} from 'react-bootstrap';
 import IconButton from "@material-ui/core/IconButton";
@@ -10,7 +10,7 @@ import './Post.css';
 
 function Post({username, caption, imageUrl}){
 
-	const [comments, setComments] = useState([
+	const [comments] = useState([
 		{
 			username: "rando1",
 			text: "wow your post is so cool"
@@ -48,7 +48,7 @@ function Post({username, caption, imageUrl}){
 			</div>
 			
 			{/*image*/}
-			<img className="post-image" src={imageUrl}/>
+			<img alt="avatar1" className="post-image" src={imageUrl}/>
 			
 			{/*icon button row*/}
 			<div className="post-iconrow">

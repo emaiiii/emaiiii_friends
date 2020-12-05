@@ -9,29 +9,29 @@ DROP TABLE IF EXISTS Userid CASCADE;
 DROP TABLE IF EXISTS Photoid CASCADE;
 
 
-CREATE TABLE Userid (
-useridcnt int NOT NULL,
-PRIMARY KEY (useridcnt)
-);
+-- CREATE TABLE Userid (
+-- useridcnt int NOT NULL,
+-- PRIMARY KEY (useridcnt)
+-- );
 
-INSERT INTO userid VALUES(1);
+-- INSERT INTO userid VALUES(1);
 
-CREATE TABLE Photoid (
-photoidcnt int NOT NULL,
-PRIMARY KEY (photoidcnt)
-);
+-- CREATE TABLE Photoid (
+-- photoidcnt int NOT NULL,
+-- PRIMARY KEY (photoidcnt)
+-- );
 
-INSERT INTO Photoid VALUES(1);
+-- INSERT INTO Photoid VALUES(1);
 
 CREATE TABLE Users (
 	
-	user_id int NOT NULL, 
-	user_name varchar(30) unique,
-	email varchar(30),
-	password varchar(30),
-	num_followers int, 
+	id int NOT NULL, 
+	fname varchar(30) unique,
+	lname varchar(30),
+	email varchar(255), 
+	num_followers int,
 	num_following int, 
-	PRIMARY KEY (user_id)
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE Photos (
@@ -43,7 +43,7 @@ CREATE TABLE Photos (
 	caption varchar(2200), 
 	day varchar(10), 
 	PRIMARY KEY (photo_id),
-	FOREIGN KEY (user_id) REFERENCES users(user_id)
+	FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 CREATE TABLE Photo_stats (

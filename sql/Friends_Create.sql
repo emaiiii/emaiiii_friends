@@ -23,26 +23,30 @@ DROP TABLE IF EXISTS Photoid CASCADE;
 
 -- INSERT INTO Photoid VALUES(1);
 
-CREATE TABLE Users (
-	
-	id int NOT NULL, 
-	fname varchar(30) unique,
-	lname varchar(30),
-	email varchar(255), 
-	num_followers int,
-	num_following int, 
-	PRIMARY KEY (id)
+CREATE TABLE users(
+    id serial PRIMARY KEY,
+    fname VARCHAR(100),
+    lname VARCHAR(100),
+    email text UNIQUE NOT NULL,
+    num_followers INT DEFAULT 0,
+    num_following INT DEFAULT 0,
+    joined TIMESTAMP NOT NULL
+);
+
+CREATE TABLE login(
+    id serial PRIMARY key,
+    hash varchar(100) NOT NULL,
+    email text UNIQUE NOT NULL
 );
 
 CREATE TABLE Photos (
-	photo_id int NOT NULL, 
+	photo_id serial PRIMARY KEY, 
 	user_id int NOT NULL,
 	imgname text,
 	img bytea,
 	title varchar(100),
 	caption varchar(2200), 
 	day varchar(10), 
-	PRIMARY KEY (photo_id),
 	FOREIGN KEY (user_id) REFERENCES users(id)
 );
 

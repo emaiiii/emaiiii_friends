@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer';
 
 import './Landing.css';
 
-function Landing() {
+function Landing(props) {
 	return(
     <div className="expand">
   		<div className="flex-container-banner">

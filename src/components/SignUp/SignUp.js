@@ -7,6 +7,7 @@ function SignUp(props) {
     const [fName, setRegFName] = useState('');
     const [lName, setRegLName] = useState('');
     const [email, setRegEmail] = useState(''); 
+    const [username, setUsername] = useState('');
     const [password, setRegPass] = useState('');
     const [confPassword, setRegConfPass] = useState('');
 
@@ -24,6 +25,12 @@ function SignUp(props) {
     function onEmailChange(event){
         setRegEmail(event.target.value);
     }
+
+    // listen for event of email input
+    function onUsernameChange(event){
+        setUsername(event.target.value);
+    }
+
 
     // listen for event of password input
     function onPassChange(event){
@@ -43,6 +50,7 @@ function SignUp(props) {
             fName: fName,
             lName: lName,
             email: email,
+            username: username,
             password: password,
         }
         console.log(state);
@@ -56,6 +64,7 @@ function SignUp(props) {
                     fName: state.fName,
                     lName: state.lName,
                     email: state.email,
+                    username: state.username,
                     password: state.password,
                 })
             })
@@ -104,6 +113,12 @@ function SignUp(props) {
                                 type="email" 
                                 placeholder="Email"
                                 onChange={onEmailChange}
+                            />
+                            <input 
+                                className="field" 
+                                type="username" 
+                                placeholder="Username"
+                                onChange={onUsernameChange}
                             />
                             <input 
                                 className="field" 

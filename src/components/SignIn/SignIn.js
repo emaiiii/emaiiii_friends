@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Cookies from 'js-cookie';
 import {Link, Redirect} from "react-router-dom";
 import SignUp from '../SignUp/SignUp';
 import './SignIn.css';
@@ -40,9 +41,21 @@ function SignIn(props) {
 		})
 			.then(response => response.json())
 			.then(user => {
-				// if a user id is returned then successful log in
+				// if a user id is returned then successful log in	
 				if(user.id){
 					setRedirect(true);
+
+					// set cookies to access data across pages
+					Cookies.set('userId', user.id);
+					Cookies.set('fname', user.fname);
+					Cookies.set('lname', user.lname);
+					Cookies.set('username', user.username);
+					Cookies.set('num_followers', user.num_followers);
+					Cookies.set('num_following', user.num_following);
+					//console.log(Cookies.get('userId'));
+					//console.log(Cookies.get('username'));
+					//console.log(Cookies.get('num_followers'));
+					//console.log(Cookies.get('num_following'));
 				}
 			})
 			.catch(console.log)

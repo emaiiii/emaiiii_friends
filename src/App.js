@@ -9,7 +9,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-
   return (
     <Router>
       <div className="App">
@@ -24,7 +23,7 @@ function App() {
                 <MyProfile/>
               </Route>
 
-              {/*--DefaultLanding Page--*/}
+              {/*--Default Landing Page--*/}
               <Route path="/">
                 <Landing/>
               </Route>

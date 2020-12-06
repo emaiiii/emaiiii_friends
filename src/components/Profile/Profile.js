@@ -1,4 +1,5 @@
 import React from 'react';
+import Cookies from 'js-cookie';
 import Avatar from "@material-ui/core/Avatar";
 import PostModal from '../PostModal/PostModal';
 
@@ -7,6 +8,12 @@ import './Profile.css';
 function Profile() {
 	const [modalShow, setModalShow] = React.useState(false);
 	
+	const username = Cookies.get('username');
+	const fname = Cookies.get('fname');
+	const lname = Cookies.get('lname');
+	const num_followers = Cookies.get('num_followers');
+	const num_following = Cookies.get('num_following');
+
 	return (
 		<div className="profile">
 			<div className="profile-container">
@@ -21,13 +28,13 @@ function Profile() {
 
 				{/*Account details*/}
 				<div className="profile-right">
-					<h4 className="profile-username">emaiiii</h4>
+					<h4 className="profile-username">{username}</h4>
 					<div className="profile-attr-container">
 						<h6>100 posts</h6>
-						<h6>1696 followers</h6>
-						<h6>1 following</h6>
+						<h6>{num_followers} followers</h6>
+						<h6>{num_following} following</h6>
 					</div>
-					<h4 className="profile-name">Erik Mai</h4>
+					<h4 className="profile-name">{fname} {lname}</h4>
 					<p>UCR 20' | CS </p>
 
 					<PostModal show={modalShow} onHide={() => setModalShow(false)}/>

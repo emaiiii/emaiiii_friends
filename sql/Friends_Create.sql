@@ -47,16 +47,16 @@ CREATE TABLE Photos (
 	img bytea,
 	title varchar(100),
 	caption varchar(2200), 
-	day varchar(10), 
+	day TIMESTAMP (10), 
 	FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 CREATE TABLE Photo_stats (
 	photo_id int NOT NULL, 
-	num_likes int, 
-	num_dislikes int,
-	num_comments int, 
-	num_views int, 
+	num_likes int DEFAULT 0, 
+	num_dislikes int DEFAULT 0,
+	num_comments int DEFAULT 0, 
+	num_views int DEFAULT 0, 
 	PRIMARY KEY (photo_id)
 );
 
@@ -75,7 +75,7 @@ CREATE TABLE Comments (
 
 CREATE TABLE Photo_tag (
 	photo_id int NOT NULL, 
-	tag text[],
+	tag varchar(300),
 	PRIMARY KEY (photo_id, tag)
 );
 
@@ -84,4 +84,3 @@ CREATE TABLE User_tag (
 	user_name text[],
 	PRIMARY KEY (photo_id, user_name)
 );
-

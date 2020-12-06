@@ -1,4 +1,5 @@
 import React from 'react';
+import Cookies from 'js-cookie';
 import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
 import Avatar from "@material-ui/core/Avatar";
@@ -6,6 +7,8 @@ import Avatar from "@material-ui/core/Avatar";
 import './MainEmbed.css';
 
 function MainEmbed(){
+	const username = Cookies.get('username');
+
 	return(
 		<div className="mainEmbed">
 			{/*Profile of current user*/}
@@ -15,7 +18,7 @@ function MainEmbed(){
 					alt="emaiiii"
 					src="/static/images/avatar/1.jpg"
 				/>
-				<h6 className="avuse-name">emaiiii</h6>
+				<h6 className="avuse-name">{username}</h6>
 			</div>
 
 			{/*Suggested people to follow*/}

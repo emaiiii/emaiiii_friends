@@ -44,8 +44,18 @@ function SignIn(props) {
 				// if a user id is returned then successful log in	
 				if(user.id){
 					setRedirect(true);
+
+					// set cookies to access data across pages
 					Cookies.set('userId', user.id);
-					console.log(Cookies.get('userId'));
+					Cookies.set('fname', user.fname);
+					Cookies.set('lname', user.lname);
+					Cookies.set('username', user.username);
+					Cookies.set('num_followers', user.num_followers);
+					Cookies.set('num_following', user.num_following);
+					//console.log(Cookies.get('userId'));
+					//console.log(Cookies.get('username'));
+					//console.log(Cookies.get('num_followers'));
+					//console.log(Cookies.get('num_following'));
 				}
 			})
 			.catch(console.log)

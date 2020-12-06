@@ -6,7 +6,7 @@ import PostUploader from '../../components/PostUploader/PostUploader';
 
 import './Main.css';
 
-function Main() {
+function Main(userId) {
 	const [posts] = useState([
 		{
 			username: "emaiiii",

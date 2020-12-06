@@ -3,12 +3,16 @@ import {Link, Redirect} from "react-router-dom";
 import SignUp from '../SignUp/SignUp';
 import './SignIn.css';
 
-function SignIn(props) {
+function SignIn(handleUserId) {
 	// state management
 	const [modalShow, setModalShow] = useState(false);
 	const [signInEmail, setSignInEmail] = useState('');
 	const [signInPass, setSignInPass] = useState(''); 
 	const [redirect, setRedirect] = useState(false);
+
+	const dudecmon = (userId) => {
+		handleUserId(userId);
+	}
 
 	// listen for event of email input
 	function onEmailChange(event){
@@ -43,6 +47,7 @@ function SignIn(props) {
 				// if a user id is returned then successful log in
 				if(user.id){
 					setRedirect(true);
+					dudecmon(user.id);
 				}
 			})
 			.catch(console.log)

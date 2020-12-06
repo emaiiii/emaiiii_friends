@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {Redirect} from "react-router-dom";
 import {Modal} from 'react-bootstrap';
 import './SignUp.css';
 
@@ -10,8 +9,6 @@ function SignUp(props) {
     const [email, setRegEmail] = useState(''); 
     const [password, setRegPass] = useState('');
     const [confPassword, setRegConfPass] = useState('');
-    const [redirect, setRedirect] = useState(false);
-
 
     // listen for event of email input
     function onFNameChange(event){
@@ -64,25 +61,16 @@ function SignUp(props) {
             })
                 .then(response => response.json())
                 .then(user => {
-                    // check to see if successful to set the redirect state
                     if(user){
-                        setRedirect(true);
-                        console.log(redirect);
+                            console.log(user);
                     }
                 })
+                .catch(console.log)
         }
         else{
             console.log("Error: passwords do not match");
         }
     }
-
-    // if true redirect to the main feed page
-    function renderRedirect(){
-        if(redirect){
-            return <Redirect to="/main"/>
-        }
-    }
-
     return(
         <Modal
           {...props}
@@ -134,9 +122,6 @@ function SignUp(props) {
                                 onClick={onSubmitSignUp}
                                 >Register
                             </button>
-
-                            {/*redirect to main feed if sign up is successful*/}
-                            {renderRedirect()}
                     </form>
                 </div>
             </Modal.Body>

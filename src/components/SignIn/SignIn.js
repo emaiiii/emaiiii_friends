@@ -21,7 +21,7 @@ function SignIn(props) {
 	}
 
 	// send log in request for either a pass/fail
-	function onSubmitSignIn(){
+	function onSubmitSignIn(event){
 		// create state object for purpose of returning json object
 		const state = {
 			signInEmail: signInEmail,
@@ -39,12 +39,17 @@ function SignIn(props) {
 			})
 		})
 			.then(response => response.json())
-			.then(data => {
-				// check to see if successful to set the redirect state
-				if(data === "Success"){
+			.then(user => {
+				// if a user id is returned then successful log in
+				if(user.id){
 					setRedirect(true);
 				}
 			})
+			.catch(console.log)
+
+		// prevent input fields from clearing on button click 
+		// if unsuccessful login attempt
+		event.preventDefault();
 	}
 
 	// if true redirect to the main feed page
@@ -58,7 +63,7 @@ function SignIn(props) {
 		<section className="login-block">
 				<div className="login-container" id="login-container">
 					<div className="form-container sign-in-container">
-						<form action="#">
+						<form action="#" id="signinform">
 							<input 
 								className="accountinfo" 
 								type="email" 

@@ -24,13 +24,14 @@ DROP TABLE IF EXISTS Photoid CASCADE;
 -- INSERT INTO Photoid VALUES(1);
 
 CREATE TABLE users(
-    id serial PRIMARY KEY,
-    fname VARCHAR(100),
-    lname VARCHAR(100),
-    email text UNIQUE NOT NULL,
-    num_followers INT DEFAULT 0,
-    num_following INT DEFAULT 0,
-    joined TIMESTAMP NOT NULL
+	id serial PRIMARY KEY,
+	fname VARCHAR(100),
+	lname VARCHAR(100),
+	email text UNIQUE NOT NULL,
+	username VARCHAR(100) UNIQUE NOT NULL,
+	num_followers INT DEFAULT 0,
+	num_following INT DEFAULT 0,
+	joined TIMESTAMP NOT NULL
 );
 
 CREATE TABLE login(

@@ -95,7 +95,7 @@ function SignIn(props) {
 								Create an Account
 							</Link>
 
-							<SignUp show={modalShow} onHide={() => setModalShow(false)}/>
+							<SignUp show={modalShow} setModalShow={setModalShow} onHide={() => setModalShow(false)}/>
 						</form>
 					</div>
 				</div>

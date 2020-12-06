@@ -62,7 +62,7 @@ function SignUp(props) {
                 .then(response => response.json())
                 .then(user => {
                     if(user){
-                            console.log(user);
+                        console.log(user);
                     }
                 })
                 .catch(console.log)

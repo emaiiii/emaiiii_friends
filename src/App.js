@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Landing from './pages/Landing/Landing';
@@ -9,19 +9,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  // state management
-  const [userId, setUserId] = useState('');
-
-  function handleUserId(childData) {
-    setUserId(childData);
-  }
-
-  function printUserId(){
-    console.log(userId);
-  }
-
-  printUserId();
-
   return (
     <Router>
       <div className="App">
@@ -36,9 +23,9 @@ function App() {
                 <MyProfile/>
               </Route>
 
-              {/*--DefaultLanding Page--*/}
+              {/*--Default Landing Page--*/}
               <Route path="/">
-                <Landing handleUserId={handleUserId}/>
+                <Landing/>
               </Route>
         </Switch>
       </div>

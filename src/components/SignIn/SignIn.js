@@ -1,18 +1,15 @@
 import React, {useState} from 'react';
+import Cookies from 'js-cookie';
 import {Link, Redirect} from "react-router-dom";
 import SignUp from '../SignUp/SignUp';
 import './SignIn.css';
 
-function SignIn(handleUserId) {
+function SignIn(props) {
 	// state management
 	const [modalShow, setModalShow] = useState(false);
 	const [signInEmail, setSignInEmail] = useState('');
 	const [signInPass, setSignInPass] = useState(''); 
 	const [redirect, setRedirect] = useState(false);
-
-	const dudecmon = (userId) => {
-		handleUserId(userId);
-	}
 
 	// listen for event of email input
 	function onEmailChange(event){
@@ -44,10 +41,11 @@ function SignIn(handleUserId) {
 		})
 			.then(response => response.json())
 			.then(user => {
-				// if a user id is returned then successful log in
+				// if a user id is returned then successful log in	
 				if(user.id){
 					setRedirect(true);
-					dudecmon(user.id);
+					Cookies.set('userId', user.id);
+					console.log(Cookies.get('userId'));
 				}
 			})
 			.catch(console.log)

@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer';
 
 import './Landing.css';
 
-function Landing(handleUserId) {
+function Landing(props) {
 	return(
     <div className="expand">
   		<div className="flex-container-banner">
@@ -15,7 +15,7 @@ function Landing(handleUserId) {
           </div>
           
           <div className="signin-component">
-            <SignIn handleUserId={handleUserId}/>
+            <SignIn/>
           </div>
       </div>
 

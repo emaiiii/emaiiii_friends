@@ -81,6 +81,6 @@ CREATE TABLE Photo_tag (
 
 CREATE TABLE User_tag (
 	photo_id int NOT NULL, 
-	user_name text[],
+	user_name varchar(100),
 	PRIMARY KEY (photo_id, user_name)
 );

@@ -8,6 +8,7 @@ import './MainEmbed.css';
 
 function MainEmbed(){
 	const username = Cookies.get('username');
+	console.log(username);
 
 	return(
 		<div className="mainEmbed">

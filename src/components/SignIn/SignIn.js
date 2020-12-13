@@ -28,7 +28,7 @@ function SignIn(props) {
 			signInEmail: signInEmail,
 			signInPass: signInPass,
 		}
-		console.log(state);
+		//console.log(state);
 
 		// send sign in request to the server
 		fetch("http://localhost:3000/signin", {
@@ -53,7 +53,7 @@ function SignIn(props) {
 					Cookies.set('num_followers', user.num_followers);
 					Cookies.set('num_following', user.num_following);
 					//console.log(Cookies.get('userId'));
-					//console.log(Cookies.get('username'));
+					console.log(Cookies.get('username'));
 					//console.log(Cookies.get('num_followers'));
 					//console.log(Cookies.get('num_following'));
 				}

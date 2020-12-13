@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Cookies from 'js-cookie';
 import Avatar from "@material-ui/core/Avatar";
 import {Button} from 'react-bootstrap';
 import IconButton from "@material-ui/core/IconButton";
@@ -8,31 +9,37 @@ import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutline
 
 import './Post.css';
 
-function Post({username, caption, imageUrl}){
+function Post({photo_id, user_id, username, caption, imageUrl, comments}){
 
-	const [comments] = useState([
-		{
-			username: "rando1",
-			text: "wow your post is so cool"
-		},		
-		{
-			username: "rando2",
-			text: "amazing post"
-		},		
-		{
-			username: "rando3",
-			text: "i want to be just like you"
-		},
-		{
-			username: "rando4",
-			text: "add me on league!"
-		},
-	]);
-	
 	const [comment, setComment] = useState('');
+	const curr_user_id = parseInt(Cookies.get('userId'));
 
-	const postComment = () => (event) => {
+	// listen for event of email input
+	function onCommentChange(event){
+		setComment(event.target.value);
+	}
 
+	function onComment(event){
+		const state = {
+			photo_id: photo_id,
+			user_id: curr_user_id,
+			comment: comment,
+		}
+		console.log(state);
+		fetch("http://localhost:3000/comment", {
+			method: "post",
+			headers: {"Content-Type": "application/json"},
+			body: JSON.stringify({
+				photo_id: state.photo_id,
+				user_id: state.user_id,
+				comment: state.comment
+			})
+		})
+			.then(response => response.json())
+			.then(comment => console.log)
+			.catch(console.log)
+
+		event.preventDefault();
 	}
 
 	return(
@@ -74,7 +81,7 @@ function Post({username, caption, imageUrl}){
 				{
 					comments.map((comment, key) => (
 						<p key={key}>
-							<strong>{comment.username}</strong> {comment.text}
+							<strong>{comment.username}</strong> {comment.comment}
 						</p>
 					))
 				}
@@ -89,14 +96,14 @@ function Post({username, caption, imageUrl}){
 					type="text" 
 					value={comment}
 					placeholder="Add a comment..."
-					onChange={(e) => setComment(e.target.value)}
+					onChange={onCommentChange}
 				/>
 				<Button 
 					className="post-postButton"
 					disabled={!comment}
 					type="submit" 
 					variant="link"
-					onClick={postComment}
+					onClick={onComment}
 				>Post</Button>
 			</form>
 		</div>

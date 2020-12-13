@@ -72,8 +72,8 @@ function Post({username, caption, imageUrl}){
 			<div className="post-comments">
 				{/*--loop through the posts array and create a post component for each object--*/}
 				{
-					comments.map((comment) => (
-						<p>
+					comments.map((comment, key) => (
+						<p key={key}>
 							<strong>{comment.username}</strong> {comment.text}
 						</p>
 					))

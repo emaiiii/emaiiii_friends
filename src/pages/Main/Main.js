@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Navigation from '../../components/Navigation/Navigation';
 import MainEmbed from '../../components/MainEmbed/MainEmbed';
 import Post from '../../components/Post/Post';
@@ -6,29 +6,24 @@ import PostUploader from '../../components/PostUploader/PostUploader';
 
 import './Main.css';
 
-function Main(userId) {
-	const [posts] = useState([
-		{
-			username: "emaiiii",
-			caption: "I love Apple and Google!!",
-			imageUrl: "https://images.idgesg.net/images/article/2020/04/google-apple-contact-tracing-100838707-large.jpg"
-		},		
-		{
-			username: "mkdoan",
-			caption: "I love Apple and Google too!!",
-			imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm-Y7sqzilHz418I6RKtg-BNhp7aTz-_qIZ0qJebEMz5bqaFQcXZ4t3OiglkY0Cjfe251YxtgIBUgEeiScCcYaDA6Q-YDPiS0&usqp=CAU&ec=45732301"
-		},		
-		{
-			username: "justluo",
-			caption: "Me too!!",
-			imageUrl: "https://cdn1.dotesports.com/wp-content/uploads/2019/09/12195522/league-of-legends.jpg"
-		},
-		{
-			username: "cindyphann",
-			caption: "Me as well!",
-			imageUrl: "https://images-prod.healthline.com/hlcmsresource/images/AN_images/health-benefits-of-apples-1296x728-feature.jpg"
-		},
-	]);
+function Main({posts, comments}) {	
+	
+	function getComments(photo_id, comments){
+		let postComments = [];	
+
+		
+		comments.forEach(comment => {
+			if(comment.photo_id === photo_id){
+				postComments.push({
+					username: comment.username,
+					comment: comment.comment
+				})
+			}
+		})
+
+		//console.log(comments);
+		return postComments;
+	}
 
 	return(
 		<div className="background">
@@ -42,8 +37,15 @@ function Main(userId) {
 				<div className="mainpage-posts-left">
 					{/*--loop through the posts array and create a post component for each object--*/}
 					{
-						posts.map(post => (
-							<Post username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
+						posts.map((post, key) => (
+							<Post 
+								key={key} 
+								photo_id={post.photo_id}
+								username={post.username} 
+								caption={post.title} 
+								imageUrl={post.imageUrl}
+								comments={getComments(post.photo_id, comments)}
+							/>
 						))
 					}
 				</div>
